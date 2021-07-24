@@ -76,7 +76,5 @@ def rate_product(request):
 def get_email(request):
     data = request.data
     serializer = EmailSerializer(data=data)
-    if serializer.is_valid():
-        serializer.save()
-
+    serializer.save()
     return Response(serializer.data)
