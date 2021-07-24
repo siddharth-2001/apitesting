@@ -72,7 +72,7 @@ def rate_product(request):
             data['response'] = "Enter a rating between 0 to 5"
     return Response(data)
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 def get_email(request):
     data = request.data
     serializer = EmailSerializer(data=data)
